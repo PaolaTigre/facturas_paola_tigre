@@ -34,4 +34,12 @@ class ClientController {
     fun updateName (@RequestBody @Valid client:Client): ResponseEntity<Client>{
         return ResponseEntity(clientService.updateName(client), HttpStatus.OK)
     }
+    @GetMapping("/{id}")
+    fun listById (@PathVariable ("id") id: Long):ResponseEntity<Client>{
+        return ResponseEntity(clientService.listById(id), HttpStatus.OK)
+    }
+    @DeleteMapping("/delete/{id}")
+    fun delete (@PathVariable("id") id: Long):Boolean?{
+        return clientService.delete(id)
+    }
 }

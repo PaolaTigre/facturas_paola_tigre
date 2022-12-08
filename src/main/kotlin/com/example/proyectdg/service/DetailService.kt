@@ -76,4 +76,5 @@ class DetailService {
         }
         invoiceRepository.save(invoiceResponse)
     }
+
 }

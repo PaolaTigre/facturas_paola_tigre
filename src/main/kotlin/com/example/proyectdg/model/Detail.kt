@@ -13,13 +13,10 @@ class Detail  {
     @Id
     @Column(updatable = false)
     var id: Long? = null
-    @NotBlank
-    @NotNull
+
     var quantity: Long? = null
     @Column(name="product_id")
-    @NotNull
     var productId: Long?=null
     @Column(name="invoice_id")
-    @NotNull
     var invoiceId: Long?=null
 }

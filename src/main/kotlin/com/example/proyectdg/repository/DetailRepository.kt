@@ -14,6 +14,8 @@ interface DetailRepository : JpaRepository<Detail, Long?>{
     @Query(nativeQuery =true)//Va a leer jpa-named.....
     fun sumTotal(@Param("invoiceId") invoiceId: Long?): Double?
     fun findById(id:Long?):Detail?
+
+
 }
 
 
